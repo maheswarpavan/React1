@@ -1,0 +1,308 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(117, 112, 112);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: #ebf3ff;
+}
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  transition: all 0.5s ease-in-out; /* Smoother transitions for width */
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
+}
+
+/* Header Styles */
+.header {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out; /* Smoother transition for the header */
+}
+
+.header-img {
+  width: 70%;
+  transition: width 0.5s ease-in-out; /* Smooth transition for images */
+}
+
+.title {
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+}
+.app-subtitle {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: normal;
+  transition: font-size 0.5s ease; /* Font size transition */
+}
+
+@media (max-width: 768px) {
+  .header-img {
+    width: 90%;
+  }
+
+  .app-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #1a1a1a;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.3s ease; /* Smooth footer transition */
+}
+
+.footer p {
+  color: white;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+nav ul li {
+  margin: 0px 5px;
+  background-color: rgb(66, 61, 61);
+}
+nav ul li:active {
+  margin: 0px 5px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
+/* Filter Styles */
+.filter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: small;
+}
+
+.filter input::placeholder {
+  text-align: center;
+}
+
+.filter label {
+  background-color: rgb(20, 20, 20);
+}
+
+.filter label,
+.filter select,
+nav ul li {
+  width: 5rem;
+  text-align: center;
+}
+
+.filter input,
+.filter label,
+.filter select,
+nav ul li {
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out; /* Smooth input and select transitions */
+}
+
+.filter input:focus,
+.filter select:focus {
+  outline: none;
+}
+
+.filter input:hover,
+.filter select:hover {
+  transform: scale(1.05); /* Slight hover effect */
+}
+
+/* Main Grid and Card Styles */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Auto-adjust columns */
+  padding: 20px;
+  gap: 30px; /* Smaller gap for better responsiveness */
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.grid-card {
+  width: 100%; /* Full width inside grid */
+  height: auto;
+  background-color: #040405;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.grid-card:hover {
+  transform: scale(1.03); /* Smooth hover effect */
+  box-shadow: 0 0 15px #000; /* Slightly bigger shadow on hover */
+}
+
+.grid-card:active {
+  transform: scale(1);
+}
+
+.grid-card-image {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.grid-card-title {
+  margin: 0;
+  font-size: 1.09rem;
+  font-weight: bolder;
+}
+
+.grid-card-gerne {
+  margin: 3px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.grid-card-rating {
+  margin-top: 7px;
+  width: 35px;
+  padding: 2px;
+  font-weight: bolder;
+  background-color: #000000;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.grid-card-rating.good {
+  color: #78e756;
+}
+
+.grid-card-rating.average {
+  color: orange;
+}
+
+.grid-card-rating.bad {
+  color: #ff6262;
+}
+
+nav a:hover {
+  transform: scale(0.9rem);
+}
+
+.switch {
+  margin: 20px auto;
+  position: relative;
+  display: inline-block;
+  width: 150px; /* Width large enough to fit the label text */
+  height: 24px; /* Adjust height as needed */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #141414;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider.on {
+  background-color: #78e756;
+}
+.slider-label.on {
+  color: #000;
+  font-weight: bolder;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.slider-label {
+  color: #fff;
+  font-size: 12px;
+  width: 100%;
+  line-height: 24px;
+  text-align: center;
+  align-items: center;
+  transition: opacity 0.4s ease;
+}
+
+input:checked + .slider:before {
+  transform: translateX(125px); /* Move the circle to the other side */
+}
